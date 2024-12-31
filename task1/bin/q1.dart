@@ -1,0 +1,1 @@
+// 1.Every Dart statement ends with (semicolon -> ;)
