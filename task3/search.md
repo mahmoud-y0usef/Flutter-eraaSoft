@@ -75,5 +75,3 @@ void main() {
 
 ---
 
-If you have any questions or need further clarification, feel free to ask! ☺
-
