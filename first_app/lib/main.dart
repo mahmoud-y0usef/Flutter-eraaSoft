@@ -19,7 +19,7 @@ void main() {
       "MyApp",
       style: TextStyle(color: Colors.white),
     ),
-    backgroundColor: Color.fromARGB(255, 86, 39, 143), // بنفسجي غامق
+    backgroundColor: Color.fromARGB(255, 86, 39, 143),
     leading: Icon(Icons.menu, color: Colors.white),
     actions: [
       Icon(Icons.notifications, color: Colors.white),
