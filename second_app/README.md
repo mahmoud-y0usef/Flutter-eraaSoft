@@ -2,7 +2,7 @@
 
 ### **View SCreen**
 
-<img src="view" width="250">
+<img src="view.png" width="250">
 
 
 
