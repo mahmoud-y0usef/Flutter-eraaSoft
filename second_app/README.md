@@ -2,7 +2,7 @@
 
 ### **View SCreen**
 
-<img src="view" width="250">
+<img src="view.png" width="250">
 
 
 
@@ -10,5 +10,5 @@
 
 ## **Search Questions**
 ### dart extensions
-[Answer for Search Question 1](https://github.com/mahmoud-y0usef/Flutter-eraaSoft/blob/main/first_app/search.md)
+[Answer for Search Question 1](https://github.com/mahmoud-y0usef/Flutter-eraaSoft/blob/main/second_app/search.md)
 
