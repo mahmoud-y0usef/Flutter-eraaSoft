@@ -1,5 +1,5 @@
 
-```md
+
 # How to Make Smooth Scrolling in Flutter
 
 To achieve smooth scrolling in a Flutter application, you can use the `SingleChildScrollView`, `ListView`, or `CustomScrollView` widgets with appropriate physics settings.
@@ -16,7 +16,6 @@ SingleChildScrollView(
     ],
   ),
 );
-```
 
 ## 2. Using `ListView` for Large Lists
 For lists, use `ListView.builder` with `physics: BouncingScrollPhysics()`.
@@ -93,4 +92,4 @@ ListView(
 - Customize behavior for web with `scrollBehavior`.
 
 By implementing these methods, you can achieve a smooth scrolling experience in your Flutter app.
-```
+
