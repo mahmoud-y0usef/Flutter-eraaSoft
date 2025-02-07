@@ -16,6 +16,7 @@ SingleChildScrollView(
     ],
   ),
 );
+```
 
 ## 2. Using `ListView` for Large Lists
 For lists, use `ListView.builder` with `physics: BouncingScrollPhysics()`.
