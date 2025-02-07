@@ -1,9 +1,7 @@
 # **Flutter Task 3 - Eraa Soft**
 
-### **View Video**
-[📄 View Video](quot.gif)
-
-
+### **View Screen**
+<img src="quot.gif">
 
 
 ---
