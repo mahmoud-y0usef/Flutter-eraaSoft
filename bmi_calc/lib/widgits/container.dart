@@ -49,7 +49,7 @@ class ConatinerAppGender extends StatelessWidget {
 
 class ConatainerSlideHeight extends StatefulWidget {
   final int value;
-  final Function(int) onValueChanged; // Callback function to update height
+  final Function(int) onValueChanged;
 
   const ConatainerSlideHeight({
     super.key,
