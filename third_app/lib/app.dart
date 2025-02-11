@@ -52,19 +52,23 @@ class _MyappState extends State<Myapp> {
                     getRandomQuote();
                   });
                 },
-                child: Text(
+                child: 
+                Text( 
                   'Get New Quote',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 20,
                   ),
                 ),
+
+
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xffD08C37),
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
+                  
                 ),
               ),
             ],
