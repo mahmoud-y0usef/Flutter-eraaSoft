@@ -12,7 +12,7 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
-      backgroundColor: ColorsApp.secondary,
+      backgroundColor: ColorsApp.primary,
       shadowColor: ColorsApp.tertiaryVariant,
       title: TextCustom(
           title: 'BMI Calculator',
