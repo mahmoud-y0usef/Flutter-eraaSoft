@@ -3,6 +3,44 @@ import 'package:massenger_app/core/colors.dart';
 import 'package:massenger_app/widgits/appbar.dart';
 import 'package:massenger_app/widgits/nav.dart';
 
+final List<Map<String, dynamic>> activeUsers = [
+  {
+    "name": "William Henry Gates",
+    "avatar": "assets/images/bill_gates.jpg",
+    "isOnline": true
+  },
+  {
+    "name": "Jeff Bezos",
+    "avatar": "assets/images/jeff_bezos.jpg",
+    "isOnline": true
+  },
+  {
+    "name": "Mark Zuckerberg",
+    "avatar": "assets/images/mark_zuckerberg.jpg",
+    "isOnline": true
+  },
+  {
+    "name": "Warren Buffett",
+    "avatar": "assets/images/warren_buffett.jpg",
+    "isOnline": true
+  },
+  {
+    "name": "Warren Buffett",
+    "avatar": "assets/images/warren_buffett.jpg",
+    "isOnline": true
+  },
+  {
+    "name": "Warren Buffett",
+    "avatar": "assets/images/warren_buffett.jpg",
+    "isOnline": true
+  },
+  {
+    "name": "Warren Buffett",
+    "avatar": "assets/images/warren_buffett.jpg",
+    "isOnline": true
+  },
+];
+
 final List<Map<String, dynamic>> chatList = [
   {
     "name": "Warren Buffett",
@@ -118,10 +156,8 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey[200],
       appBar: AppBarCustom(),
       bottomNavigationBar: Nav(),
-
       body: Column(
         children: [
-
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Container(
@@ -147,7 +183,61 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
 
-          // 📩 قائمة الدردشات
+          SizedBox(height: 10),
+          SizedBox(
+            height: 100,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: activeUsers.length,
+              itemBuilder: (context, index) {
+                final user = activeUsers[index];
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child: Column(
+                    children: [
+                      Stack(
+                        children: [
+                          CircleAvatar(
+                            backgroundImage: AssetImage(user["avatar"]),
+                            radius: 30,
+                          ),
+                          if (user["isOnline"])
+                            Positioned(
+                              bottom: 2,
+                              right: 2,
+                              child: Container(
+                                width: 12,
+                                height: 12,
+                                decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  shape: BoxShape.circle,
+                                  border:
+                                      Border.all(color: Colors.white, width: 2),
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+                      const SizedBox(height: 5),
+                      SizedBox(
+                        width: 70,
+                        child: Text(
+                          user["name"],
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(fontSize: 12),
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
+
+
+
           Expanded(
             child: ListView.builder(
               itemCount: chatList.length,
@@ -190,8 +280,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(color: Colors.grey[600]),
                   ),
                   onTap: () {
-                    // 👇 عند الضغط على المحادثة، انتقل إلى صفحة المحادثة
-                    // Navigator.pushNamed(context, RouteName.chatScreen, arguments: chat);
+
                   },
                 );
               },
