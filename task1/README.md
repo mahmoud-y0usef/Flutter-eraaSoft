@@ -26,7 +26,7 @@
 - c. 7 + 2 + 9^2 =  
 - d. 3 * 5 * 8 + 4 * (2 + 5) / 5 =  
 
-[Answer for Question 6]([https://github.com/mahmoud-y0usef/Flutter-eraaSoft/blob/main/task1/bin/q6.dart)
+[Answer for Question 6](https://github.com/mahmoud-y0usef/Flutter-eraaSoft/blob/main/task1/bin/q6.dart)
 
 #### 7. What causes an error in this code?
 ```dart
