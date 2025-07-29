@@ -1,9 +1,15 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
+import 'widgits/custome_button.dart';
 
-class CounterScreen extends StatelessWidget {
-  const CounterScreen({super.key});
+class CounterScreen extends StatefulWidget {
+  CounterScreen({super.key});
+
+  @override
+  State<CounterScreen> createState() => _CounterScreenState();
+}
+
+class _CounterScreenState extends State<CounterScreen> {
+  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -38,17 +44,82 @@ class CounterScreen extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
+            Divider(
+              color: const Color.fromARGB(143, 0, 0, 0),
+              thickness: 1,
+              indent: 50,
+              endIndent: 50,
+            ),
+            SizedBox(
+              height: 10,
+            ),
             Container(
-              width: 300,
+              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+              decoration: BoxDecoration(
+                  color: const Color.fromARGB(120, 255, 255, 255),
+                  borderRadius: BorderRadius.circular(20)),
+              child: Text(
+                "Counter : $counter",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.green,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
               child: Column(
                 children: [
-                  Divider(
-                    color: const Color.fromARGB(143, 0, 0, 0),
-                    thickness: 1,
+                  CustomeButton(
+                    title: "Increment",
+                    color: Colors.green,
+                    onPressed: () {
+                      setState(() {
+                        counter = counter + 1;
+                      });
+                    },
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  CustomeButton(
+                    title: "Decrement",
+                    color: Colors.deepOrange,
+                    onPressed: () {
+                      setState(() {
+                        if (counter > 0) {
+                          setState(() {
+                            counter = counter - 1;
+                          });
+                        } else
+                          return;
+                      });
+                    },
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  CustomeButton(
+                    title: "Reset",
+                    color: Colors.red,
+                    onPressed: () {
+                      if (counter > 0)
+                        setState(() {
+                          counter = 0;
+                        });
+                      else
+                        return;
+                    },
+                  ),
+                  SizedBox(
+                    height: 20,
                   ),
                 ],
               ),
-            ),
+            )
           ],
         ),
       ),
